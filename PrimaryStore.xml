@@ -15868,6 +15868,45 @@
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="CommandGroup" entityPK="2742970434193580514" parentPK="0">
 	<fval name="name"><value>Available Command Entities</value></fval>
 </entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="CircuitContainer" entityPK="2922035853152486301" parentPK="0">
+	<fval name="name"><value>DevOpsGit</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="3305813361711328991" parentPK="2922035853152486301">
+	<fval name="category"><value contentType="reference">8354662122183705156</value></fval>
+	<fval name="description"><value></value></fval>
+	<fval name="logMask"><value>3</value></fval>
+	<fval name="name"><value>PrimerPolitica</value></fval>
+	<fval name="start"><value contentType="reference">7048480435452277787</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="HttpBasicFilter" entityPK="7048480435452277787" parentPK="3305813361711328991">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="allowClientRetry"><value>1</value></fval>
+	<fval name="allowRetries"><value>0</value></fval>
+	<fval name="cacheToUse"><value contentType="reference">
+<key type='CacheManager'><id field='name' value='Cache Manager'/><key type='Cache'><id field='name' value='Invalid Login Attempts'/></key></key>	</value></fval>
+	<fval name="category"><value contentType="reference">493010300053896691</value></fval>
+	<fval name="credentialFormat"><value>Username</value></fval>
+	<fval name="invalidAttempts"><value>5</value></fval>
+	<fval name="lock"><value>0</value></fval>
+	<fval name="lockKey"><value>${http.request.clientaddr}</value></fval>
+	<fval name="lockTimePeriod"><value>30</value></fval>
+	<fval name="lockTimePeriodUnit"><value>minute</value></fval>
+	<fval name="lockUser"><value>0</value></fval>
+	<fval name="logFailure"><value>HTTP basic authentication failed</value></fval>
+	<fval name="logFatal"><value>Error occurred while authenticating via HTTP Basic. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>HTTP basic authentication success for ${authentication.subject.id}</value></fval>
+	<fval name="name"><value>HTTP Basic</value></fval>
+	<fval name="removeAuthNHeader"><value>0</value></fval>
+	<fval name="repository"><value contentType="reference">
+<key type='AuthnRepositoryGroup'><id field='name' value='Authentication Repositories'/><key type='AuthnRepositoryLocalGroup'><id field='name' value='Local Repositories'/><key type='AuthnRepositoryLocal'><id field='name' value='Local User Store'/></key></key></key>	</value></fval>
+	<fval name="timePeriod"><value>1</value></fval>
+	<fval name="timePeriodUnit"><value>minute</value></fval>
+	<fval name="userInvalidAttempts"><value>6</value></fval>
+	<fval name="userTimePeriod"><value>5</value></fval>
+	<fval name="userTimePeriodUnit"><value>minute</value></fval>
+</entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="MimeTypeGroup" entityPK="3248224077714878645" parentPK="0">
 	<fval name="name"><value>Mime Types</value></fval>
 </entity>
